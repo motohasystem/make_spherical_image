@@ -32,6 +32,7 @@ filename = sys.argv[1]
 result = make_spherical(filename)
 (body, ext) = filename.split('.')
 
+result = result.convert('RGB')
 img_w10k = result.resize((10000, 5000))
 img_w5000 = result.resize((5000, 2500))
 img_w2500 = result.resize((2500, 1250))
